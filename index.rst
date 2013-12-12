@@ -13,6 +13,7 @@ Wykłady
    wyklad4/wyk4.rst
    wyklad5/wyk.rst
    wyklad6/wyk.rst
+   wyklad89/zaj.rst
 
 Zajęcia
 -------
@@ -26,6 +27,7 @@ Zajęcia
    wyklad4/zaj4.rst
    wyklad5/zaj.rst
    wyklad6/zaj.rst
+   wyklad89/zaj.rst
 
 Projekty
 --------
@@ -33,7 +35,7 @@ Projekty
 .. toctree::
    :maxdepth: 1
 
-    projekt.rst
+   projekt.rst
 
 Pozostałe
 ---------
