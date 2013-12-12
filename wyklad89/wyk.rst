@@ -133,7 +133,7 @@ Jest to standatdowa biblioteka do przeprowadzania testów. Podstawową jednostk�
 pisania testów jest klasa, klasa taka zawiera jeden lub więcej testów:
 
 .. literalinclude:: /examples/addition_test.py
-   :linenos: 12-21
+   :lines: 12-21
 
 Jest to prostsze niż wygląda. Tesy to wszystkie metody których nazwy zaczynają
 się od słowa ``test`` i są one automatycznie wykrywane i uruchamiane. W naszym

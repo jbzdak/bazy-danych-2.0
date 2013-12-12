@@ -1,25 +1,4 @@
 
-.. testsetup:: *
-
-    import orm
-    import settings
-    from operator import attrgetter
-
-    orm.Base.metadata.drop_all(settings.engine)
-    TAGS = [
-        orm.Tag("status:student",  "Student"),
-        orm.Tag("status:doktorant",  "Doktorant"),
-        orm.Tag("status:absolwent",  "Absolwent"),
-        orm.Tag("praca:inz",  "Praca Inżynierska"),
-        orm.Tag("praca:mgr",  "Praca Magisterska"),
-        orm.Tag("praca:dr",  "Praca Doktorska")
-    ]
-
-    TAGS = sorted(TAGS, key=attrgetter("key"))
-
-    from sqlalchemy.schema import CreateTable
-    from sqlalchemy.orm import relationship
-
 ORM (zajęcia 8 i 9)
 ===================
 
@@ -223,7 +202,7 @@ Tworzenie modeli w SQL Alchemy
 
 By stworzyć model tworzymy klasę dziedziczącą po Base:
 
-.. testcode::
+.. code-block:: python
 
     from orm import *
 
@@ -250,7 +229,7 @@ Obejrzyjmy sobie wygenerowany kod SQL :
 
 By pokazać definiowanie kluczy swórzmy drugą tabelę:
 
-.. testcode::
+.. code-block:: python
 
     class TabB(Base):
 

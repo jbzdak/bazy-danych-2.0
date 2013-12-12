@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>640</x>
+      <y>90</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>PRACOWNIK
+--
+SERIAL id PK,
+character varying name,
+character varying surname,
+gender integer, 
+character varying tel_no
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>640</x>
+      <y>470</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>PRACA_DYPLOMOWA
+--
+character varying type PK, 
+integer student_id PK, 
+integer promotor_id, 
+character varying tytul</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>430</x>
+      <y>500</y>
+      <w>230</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+q1=type
+m2=0..1</panel_attributes>
+    <additional_attributes>210;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>250</x>
+      <y>100</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>STUDENT
+--
+SERIAL id PK,
+character varying name,
+character varying surname,
+gender integer, 
+status character varying FK,
+message character varying
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>250</x>
+      <y>260</y>
+      <w>94</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+q1=status
+m2=1
+q2=key</panel_attributes>
+    <additional_attributes>50;30;50;200</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>400</x>
+      <y>260</y>
+      <w>344</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+
+m2=0..3
+q2=student_id</panel_attributes>
+    <additional_attributes>30;30;30;130;290;130;290;210</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>730</x>
+      <y>250</y>
+      <w>134</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+q1=promotor_id
+m2=0..1</panel_attributes>
+    <additional_attributes>70;220;70;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>250</x>
+      <y>460</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>TAG
+--
+character varying key PK, 
+character varying label,  
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
