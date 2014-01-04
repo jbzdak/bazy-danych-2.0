@@ -13,7 +13,7 @@ Wykłady
    wyklad4/wyk4.rst
    wyklad5/wyk.rst
    wyklad6/wyk.rst
-   wyklad89/zaj.rst
+   wyklad89/wyk.rst
 
 Zajęcia
 -------

@@ -15,7 +15,7 @@ Wygenerowaną stronę można obejrzeć pod takim adresem:
 * Użytek niekomercyjny
 * Bez utworów zależnych
 
-patrz: :doc:`/copyright.rst`. Jeśli ktoś będzie chciał wykorzystać fragmenty
+patrz: :doc:`copyright`. Jeśli ktoś będzie chciał wykorzystać fragmenty
 tej pracy w swojej pracy dydaktycznej, będzie potrzebował mojej zgody (choćby
 by dokonać zmian) proszę w takim wypadku o kontakt i prawdopodobnie udzielę
 takiej zgody.

@@ -1,7 +1,7 @@
 
 
-Wykład 7: Object Relational Mapping
-===================================
+Wykład 8 i 9: Object Relational Mapping
+========================================
 
 
 Zadanie do wykonania na ćwiczeniach
@@ -55,7 +55,7 @@ W Javie głównym narzędziem uzyskiwania dostępu do bazy danych jest interfejs
 
 
 Język Python
-============
+------------
 
 Ponieważ ORM wykracza poza ``SQL`` musiałem wybrać jakiś inny język w jakim
 będziemy pracować.
@@ -132,7 +132,7 @@ Biblioteka unittest
 Jest to standatdowa biblioteka do przeprowadzania testów. Podstawową jednostką
 pisania testów jest klasa, klasa taka zawiera jeden lub więcej testów:
 
-.. literalinclude:: /examples/addition_test.py
+.. literalinclude:: examples/addition_test.py
    :lines: 12-21
 
 Jest to prostsze niż wygląda. Tesy to wszystkie metody których nazwy zaczynają
@@ -141,7 +141,7 @@ przykładzie są dwa testy.
 
 Typowy test wygląda tak:
 
-.. literalinclude:: /examples/addition_test.py
+.. literalinclude:: examples/addition_test.py
     :pyobject: TestMathematics.test_addition
 
 
@@ -161,7 +161,7 @@ uruchamiana jest po wykonaniu całej klasy testów.
 Uruchamianie testów unittest
 ----------------------------
 
-By uruchomić testy z pliku :download:`/examples/addition_test.py` należy pobrać go
+By uruchomić testy z pliku :download:`examples/addition_test.py` należy pobrać go
 i w katalogu w którym go pobrano wykonać polecenie:
 
 .. code-block:: bash
@@ -169,7 +169,7 @@ i w katalogu w którym go pobrano wykonać polecenie:
     python -m unittest addition_test.py
 
 SQL Alchemy
-===========
+-----------
 
 SQL Alchemy jest jedną z bibliotek ORM w Pythonie, jest warta poznania ponieważ
 nie nakłada żadnych ograniczeń na schemat jaki opisuje.
@@ -203,31 +203,31 @@ Ustawienie modułu zawierającego encje
 
 Najpierw importujemy potrzebne obiekty
 
-.. literalinclude:: /examples/tag.py
+.. literalinclude:: examples/tag.py
     :lines: 1-8
 
 Base jest dynamicznie generowaną klasą bazową dla naszych modeli.
 
 Definiujemy klasę:
 
-.. literalinclude:: /examples/tag.py
+.. literalinclude:: examples/tag.py
     :pyobject: Tag
 
 
 Klasa ta dziedziczy po Base:
 
-.. literalinclude:: /examples/tag.py
+.. literalinclude:: examples/tag.py
     :lines: 10
 
 Następnie definiujemy że klasa ta odwzorowuje dane w tabeli "TAG":
 
-.. literalinclude:: /examples/tag.py
+.. literalinclude:: examples/tag.py
     :lines: 11
 
 Oraz zawiera dwie kolumny: ``key`` oraz ``label`` które zawierają typ ``character
 varying``.
 
-.. literalinclude:: /examples/tag.py
+.. literalinclude:: examples/tag.py
     :lines: 12-13
 
 Dalsze definicje **nie mają nic wspólnego z ``ORM``**, są użyte dla wygody i
@@ -237,6 +237,11 @@ Metoda ``__init__`` (od inicjalizacjja) definiuje konstruktor obiektu,
 metoda ``__eq__`` (jej nazwa pochodzi od equals) określa
 działanie operatora ``==``, a metoda ``__repr__`` określa jak dany obiekt będzie
 wyświetlany na konsoli.
+
+.. note::
+
+    Żeby móc napisać: ``Student(name="Foo",  surname="Bar")`` musicie stworzyć
+    odpowiedni konstruktor w tej klasie. 
 
 
 Uzyskiwanie połączenia z bazą danych
@@ -302,7 +307,7 @@ Do wykonywania zapytań służy metoda ``query`` na obiekcie ``session``:
 
     session.query(Tag).all()
 
-Pełny przykład :download:`/examples/tag.py`
+Pełny przykład :download:`examples/tag.py`
 
 Wykonanie przykładu
 -------------------
@@ -312,16 +317,16 @@ Wykonanie przykładu
 3. Proszę wykonać: ``python tag.py``.
 
 Zadania na wejściówce
-=====================
+---------------------
 
-1. Prawodopodobnie będzie kilka zadań z Pythona.
+1. Prawodopodobnie będzie kilka zadań z Pythona (proste!)
 
 Zadanie do zrobienia na zajęciach
-=================================
+---------------------------------
 
 Podaje zgrubny opis żebyście Państwo nie panikowali
 
-1. Dopisanie modeli dla studenta i pracownika (wraz z relacjami)
-2. Napisanie kodu testującego schematy (przy czym bazę danych ustawiam ja)
+1. Dopisanie modeli dla studenta i pracownika (wraz z relacjami) --- zajęcia 8
+2. Napisanie kodu testującego schematy (przy czym bazę danych ustawiam ja) --- zajęcia 9
 
 

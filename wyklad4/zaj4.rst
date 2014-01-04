@@ -161,6 +161,7 @@ Tabela ``OSOBA`` zawiera:
 * ``id`` serial  klucz główny
 * ``name`` character varying NOT NULL
 * ``surname`` character varying NOT NULL
+* ``gender`` integer
 
 Tabela ``STUDENT`` zawiera:
 

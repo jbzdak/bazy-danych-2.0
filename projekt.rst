@@ -1,6 +1,11 @@
 Projekt
 =======
 
+Wykonanie projektu
+------------------
+
+Projekt można wykonać samodzielnie, bądź w zespołach dwuosobowych. 
+
 Historia
 --------
 
@@ -59,7 +64,9 @@ Rejestrowaie połączenia telefonicznego składa się z takich funkcji:
     Sprawdza połączenie typu ``element_id`` między numerami,
     ``from_number`` oraz ``to_number`` może być rozpoczęte.
 
-    Zwraca ilość jednostek tego połączenia na którą stać użytownika.
+    Dla planów na kartę zwraca ilość jednostek, które mogą zostać wykonane,
+    dla planów z abonamentem zwraca informację o możliwości dowolnej
+    ilości jednostek połączenia (sposób pozostawiam Państwu do wyboru).
 
     :param varchar from_number: Numer wysylający --- jest on w naszej sieci
     :param varchar to_number: Numer który odbiera połączenie.

@@ -4,12 +4,12 @@ ORM (zajęcia 8 i 9)
 
 
 Wstęp
-------
+-----
 
 1. IDE do pythona proszę użyć dowolne (ja polecam spydera ---
    powinien być zainstalowany). Osoby zainteresowane mogą profesjonalny edytor
    pycharm w wersji open-source: `stąd <https://www.jetbrains.com/pycharm/download/index.html>`_.
-2. Startowy projekt: :download:`/data/zaj_7_initial_stud.zip`
+2. Startowy projekt: :download:`data/zaj_7_initial_stud.zip`
 
 Część A: Stworzenie ORM (zajęcia 8)
 ===================================
@@ -18,7 +18,7 @@ Cześć A polega na stworzeniu klas ORM. Zadanie to nie będzie podlegało
 formalnemu sprawdzeniu, tj. nie będzie oceniane, jednak jego prawidłowe wykonanie
 będzie konieczne do sprawdzenia dalszej części prac
 
-.. figure:: /wyk7/db-schema.*
+.. figure:: data/db-schema.*
 
 Wykonanie zadania w domu
 ------------------------
@@ -30,8 +30,9 @@ Wykonanie zadania w domu
 3. Należy zainstalować sterownik dostępu do bazy danych postgres
    `psycopg2 <http://initd.org/psycopg/download/>`_
 4. Dobrze jest zainstalować sobie jakieś IDE do pythona
+
  a. Może być to `spyder <http://code.google.com/p/spyderlib/>`_
- b. Może być to `pycharm https://www.jetbrains.com/pycharm/download/index.html`_
+ b. Może być to `pycharm <https://www.jetbrains.com/pycharm/download/index.html>`_
 
 Zadanie A.1: Używanie ORM z konsoli pythona
 -------------------------------------------
@@ -101,7 +102,7 @@ najpierw wykonać polecenie rollback:
     >>> sess.query(orm.Tag).all() #Wybieramy wszystkie tagi z bazy danych doctest: +IGNORE_EXCEPTION_DETAIL
     []
 
-Nasze polecenie zwraca pustą listę, co znaczy że w bazie danych ``TAG``ów nie ma
+Nasze polecenie zwraca pustą listę, co znaczy że w bazie danych ``TAG``-ów nie ma
 (co raczej nie powinno dziwić, skoro przed chwilą stworzyliśmy tą tabelę.
 
 Stwórzmy więc jakieś tagi:
@@ -258,7 +259,7 @@ Obejrzyjmy sobie wygenerowany kod SQL :
 
 
 Treść polecenia
-----------------
+---------------
 
 Proszę stworzyć modele odwzorowujące tabele student i pracownik
 
@@ -431,7 +432,7 @@ Relacje to coś co pozwala nam odnosić się do innych obiektów, które powiąz
 
 
 Treść polecenia
-----------------
+---------------
 
 1. Proszę dodać relacje między studentem a pracą dyplomową.
 2. Proszę dodać relację między pracownikiem a pracą dyplomową
@@ -471,7 +472,7 @@ Dodać relacje Wiele-do-Wieku, między studentem a pracownikiem poprzez
 pracę dyplomową.
 
 Część B: Użycie ORM (zajęcia 9)
-================================
+===============================
 
 Zapoznanie z kodem
 ------------------
@@ -503,7 +504,7 @@ By podmienić schemat który sprawdzamy należy zamienić wartość ``SCHEMA_FIL
 
 Test sprawdzający czy ta się zapisać studenta:
 
-.. code-block::python
+.. code-block:: python
 
     class CheckSchemaTestCase(tester.SchemaUnittest, unittest.TestCase):
 
@@ -514,7 +515,7 @@ Test sprawdzający czy ta się zapisać studenta:
 
 
 Testy pozytywne
-===============
+---------------
 
 Są to testy w których sprawdzamy czy baza danych reaguje prawidłowo na
 prawidłowe zapytania.
@@ -548,6 +549,17 @@ Asercje wykonujemy za pomocą metod wbudowanych w unittesta:
             self.assertIsNone(1+1)
             self.assertIsNone(None)
 
+Uruchamianie testów
+-------------------
+
+By uruchomić wszystkie zaimportowane klasy testów należy dodać do skryptu
+takie polecenie:
+
+.. code-block:: python
+
+    import unittest
+    unittest.main()
+
 Zamykanie sesji
 ---------------
 
@@ -576,7 +588,7 @@ mających sensownie brzmiące i niepowtarzalne imiona i nazwiska.
 
 
 Testy negatywne
-===============
+---------------
 
 Są to testy w których testujemy jak baza danych reaguje na nieprawidłowe dane
 (powinna zgłaszać wyjątek).
